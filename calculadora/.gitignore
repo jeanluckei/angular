@@ -5,6 +5,7 @@
 /tmp
 /out-tsc
 /bazel-out
+/integration/bazel/bazel-*
 
 # Node
 /node_modules
@@ -28,6 +29,20 @@ yarn-error.log
 !.vscode/extensions.json
 .history/*
 
+# Include when developing application packages.
+pubspec.lock
+.devcontainer/*
+!.devcontainer/README.md
+!.devcontainer/recommended-devcontainer.json
+!.devcontainer/recommended-Dockerfile
+.settings/
+*.swo
+*.swp
+modules/.settings
+modules/.vscode
+.vimrc
+.nvimrc
+
 # Miscellaneous
 /.angular/cache
 .sass-cache/
@@ -40,3 +55,29 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# CircleCI temporary file for cache key computation.
+# See `save_month_to_file` in `.circleci/config.yml`.
+month.txt
+
+# Don't check in secret files
+*secret.js
+
+# build-analytics
+.build-analytics
+
+# rollup-test output
+/modules/rollup-test/dist/
+
+# User specific bazel settings
+.bazelrc.user
+
+# User specific ng-dev settings
+.ng-dev.user*
+
+.notes.md
+baseline.json
+
+# Husky
+.husky/_
+aio/content/examples/.DS_Store
