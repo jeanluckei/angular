@@ -8,6 +8,7 @@
             <div class="col-xs-3">
               <button
                 type="button"
+                (click)="clear()"
                 class="btn btn-danger kz-btn">C
               </button>
             </div>
@@ -128,6 +129,7 @@
               <button
                 type="button"
                 class="btn btn-default kz-btn"
+                (click)="addNumber('0')"
                 id="btn0">0
               </button>
             </div>
@@ -135,6 +137,7 @@
               <button
                 type="button"
                 class="btn btn-default kz-btn"
+                (click)="addNumber('.')"
                 id="btnDecimal">.
               </button>
             </div>
@@ -142,6 +145,7 @@
               <button
                 type="button"
                 class="btn btn-success kz-btn"
+                (click)="calculate()"
                 id="btnCalcular">=
               </button>
             </div>
